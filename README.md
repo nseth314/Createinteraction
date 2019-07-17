@@ -45,13 +45,12 @@ Explain what these tests test and why
 Give an example
 ```
 
-### And coding style tests
+### EP for Rest Call:
 
-Explain what these tests test and why
+http://caplaut01/createinteraction/api/v1/createci
 
-```
-Give an example
-```
+Input Parameters : Account number and Customer number
+Output: Success or failure message
 
 ## Deployment
 
@@ -63,8 +62,17 @@ File path:
 
 Please follow following commands if you wish to make any changes :
 
-Build :
-Run:
+Build : docker build -t customerinteraction .
+Deploy Image:docker run -it --restart=unless-stopped --name=customerinteraction -v /appl/automation/customerinteraction/app:/app customerinteraction
+[automation@cadlaut01 ~]$ docker ps -a|grep customerinteraction
+165e39812197        customerinteraction                      "/entrypoint.sh /s..."   2 days ago          Up 35 hours                 80/tcp, 443/tcp, 5000/tcp                                                customerinteraction
+
+Connect to Container:
+
+docker  exec -it 165e39812197 bash
+root@165e39812197:/app# 
+
+Also, update customerinteraction conf entry in nginx conf file.
 
 
 
@@ -80,7 +88,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-V1 
+Version:1
 
 ## Authors
 
