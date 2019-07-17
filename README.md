@@ -23,14 +23,15 @@ pip install -r requirements.txt
 
  
 ### EP for Rest Call:
-#local host :http://localhost:8001/createinteraction/api/v1/createci  
 
-#Dev :http://cadlaut01/createinteraction/api/v1/createci  
+#**local host** :http://localhost:8001/createinteraction/api/v1/createci  
 
-#Prod :http://caplaut01/createinteraction/api/v1/createci  
+#**Dev** :http://cadlaut01/createinteraction/api/v1/createci  
+
+#**Prod** :http://caplaut01/createinteraction/api/v1/createci  
 
 
-#Input Parameters : 
+##**Input Parameters** : 
 
 {
         "transactionId": "%s",(transaction id from your code)
@@ -71,12 +72,12 @@ data = '''{
         
         response = requests.post(url, headers=headers, allow_redirects=False, verify=False, data=data, proxies=proxy)
 
-#Output Parameters : 
+##Output Parameters : 
 
-Success Response:
+**Success Response:**
 {"success":"Y","reason":"submitted successfully"}
 
-Failure Response:
+**Failure Response:**
 
 {"success":"N","reason":"Create interaction failed with {}".format(response.status_code)}  
 
@@ -93,12 +94,12 @@ File path:
 
 Please follow following commands if you wish to make any changes :
 
-Build : docker build -t customerinteraction .
-Deploy Image:docker run -it --restart=unless-stopped --name=customerinteraction -v /appl/automation/customerinteraction/app:/app customerinteraction
+**Build** : docker build -t customerinteraction .
+**Deploy Image:** docker run -it --restart=unless-stopped --name=customerinteraction -v /appl/automation/customerinteraction/app:/app customerinteraction
 [automation@cadlaut01 ~]$ docker ps -a|grep customerinteraction
 165e39812197        customerinteraction                      "/entrypoint.sh /s..."   2 days ago          Up 35 hours                 80/tcp, 443/tcp, 5000/tcp                                                customerinteraction
 
-Connect to Container:
+**Connect to Container:**
 
 docker  exec -it 165e39812197 bash
 root@165e39812197:/app# 
