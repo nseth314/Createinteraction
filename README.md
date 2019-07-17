@@ -9,54 +9,77 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+Python
+Code editor (i.e vscode etc)
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
+Clone repository on your local
+Create Virtual Environment , name "venv"
+pip install -r requirements.txt
+ 
 ### EP for Rest Call:
+#local host :http://localhost:8001/createinteraction/api/v1/createci
+#Dev :http://cadlaut01/createinteraction/api/v1/createci
+#Prod :http://caplaut01/createinteraction/api/v1/createci
 
-http://caplaut01/createinteraction/api/v1/createci
+#Input Parameters : 
 
-Input Parameters : Account number and Customer number
-Output: Success or failure message
+{
+        "transactionId": "%s",(transaction id from your code)
+        "contextentity":"Account",
+        "customernumber": "%s",(Customer number on which CI needs to be created)
+        "accountnumber": "%s",(Account number on which CI needs to be created)
+        "description":"Customer Opted out from Bill Reminder (updated by Optie bot)",(Change this according to your requirement)
+        "contactmedium":"Notification - SMS",(Change this according to your requirement)
+        "citype":"Billing",(Change this according to your requirement)
+        "cisubtype":"Billing",(Change this according to your requirement)
+        "ciordernumber":"",
+        "ciservicename":"DeliveryMode",
+        "ciserviceoptionvalue":"Asynchronous"
+        }
+
+Example data set:
+
+data = '''{
+        "transactionId": "%s",
+        "contextentity":"Account",
+        "customernumber": "%s",
+        "accountnumber": "%s",
+        "description":"Customer Opted out from Bill Reminder (updated by Optie bot)",
+        "contactmedium":"Notification - SMS",
+        "citype":"Billing",
+        "cisubtype":"Billing",
+        "ciordernumber":"",
+        "ciservicename":"DeliveryMode",
+        "ciserviceoptionvalue":"Asynchronous"
+        }'''%(transactionID,customernumber,accountnumber)
+        #print (data)
+        url = restcreateinteractionConfig['getAPI']
+        headers = {
+                'content-type': "application/json",
+                'cache-control': "no-cache",
+                'charset': "utf-8"
+                    }             
+        
+        response = requests.post(url, headers=headers, allow_redirects=False, verify=False, data=data, proxies=proxy)
+
+#Output Parameters : 
+
+Success Response:
+{"success":"Y","reason":"submitted successfully"}
+
+Failure Response:
+
+{"success":"N","reason":"Create interaction failed with {}".format(response.status_code)}
+
+
 
 ## Deployment
 
-The code is located on Docker production (caplaut01), location :
+The code is located on Docker production env (caplaut01), location :
 
-Image name:
+Image name: 
 File path:
 
 
@@ -78,13 +101,11 @@ Also, update customerinteraction conf entry in nginx conf file.
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
 
 ## Versioning
 
