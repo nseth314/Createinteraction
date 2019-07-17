@@ -15,14 +15,20 @@ Code editor (i.e vscode etc)
 
 ### Installing
 
-Clone repository on your local
-Create Virtual Environment , name "venv"
-pip install -r requirements.txt
+Clone repository on your local  
+
+Create Virtual Environment , name "venv"  
+
+pip install -r requirements.txt  
+
  
 ### EP for Rest Call:
-#local host :http://localhost:8001/createinteraction/api/v1/createci
-#Dev :http://cadlaut01/createinteraction/api/v1/createci
-#Prod :http://caplaut01/createinteraction/api/v1/createci
+#local host :http://localhost:8001/createinteraction/api/v1/createci  
+
+#Dev :http://cadlaut01/createinteraction/api/v1/createci  
+
+#Prod :http://caplaut01/createinteraction/api/v1/createci  
+
 
 #Input Parameters : 
 
@@ -116,11 +122,16 @@ Version:1
 
 ## Authors
 
-**Rajesh Babu** - *Initial work* - Soap call and Template for create customer interaction
-**Naresh Seth** - *Dockerization* - Move to docker dev to make code reusable
-**Naresh Seth** - *Testing* - Testing code fuctionalitity with Rest calls
-**Naresh Seth** - *Productionization* - Made code available for anyone in organisation
-**Pareen Kunia** - *Reviewer* - Reviewed code and guided throughout the project  
+**Rajesh Babu** - *Initial work* - Soap call and Template for create customer interaction  
+
+**Naresh Seth** - *Dockerization* - Move to docker dev to make code reusable  
+
+**Naresh Seth** - *Testing* - Testing code fuctionalitity with Rest calls  
+
+**Naresh Seth** - *Productionization* - Made code available for anyone in organisation  
+
+**Pareen Kunia** - *Reviewer* - Reviewed code and guided throughout the project    
+
 
 
 
