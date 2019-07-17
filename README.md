@@ -1,7 +1,6 @@
-# Create Customer Interaction
+# Customer
 
-These file will provide you instructions on how to reuse existing code for create customer interaction in seibel.
-
+This repository will deal with all automation platform needs for interacting with CRM/ICMS Customer entity.
 
 ## Getting Started
 
@@ -23,7 +22,7 @@ pip install -r requirements.txt
 
  
 ### EP for Rest Call:
-
+# Create Customer Interaction
 #**local host** :http://localhost:8001/createinteraction/api/v1/createci  
 
 #**Dev** :http://cadlaut01/createinteraction/api/v1/createci  
