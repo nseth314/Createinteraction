@@ -5,7 +5,8 @@ These file will provide you instructions on how to reuse existing code for creat
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.  
+
 
 ### Prerequisites
 
@@ -71,7 +72,8 @@ Success Response:
 
 Failure Response:
 
-{"success":"N","reason":"Create interaction failed with {}".format(response.status_code)}
+{"success":"N","reason":"Create interaction failed with {}".format(response.status_code)}  
+
 
 
 
@@ -95,7 +97,8 @@ Connect to Container:
 docker  exec -it 165e39812197 bash
 root@165e39812197:/app# 
 
-Also, update customerinteraction conf entry in nginx conf file.
+Also, update customerinteraction conf entry in nginx conf file.  
+
 
 
 
@@ -117,12 +120,14 @@ Version:1
 **Naresh Seth** - *Dockerization* - Move to docker dev to make code reusable
 **Naresh Seth** - *Testing* - Testing code fuctionalitity with Rest calls
 **Naresh Seth** - *Productionization* - Made code available for anyone in organisation
-**Pareen Kunia** - *Reviewer* - Reviewed code and guided throughout the project
+**Pareen Kunia** - *Reviewer* - Reviewed code and guided throughout the project  
+
 
 
 ## License
 
-NA
+NA  
+
 
 ## Acknowledgments
 
