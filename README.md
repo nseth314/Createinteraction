@@ -72,9 +72,10 @@ data = '''{
         
         response = requests.post(url, headers=headers, allow_redirects=False, verify=False, data=data, proxies=proxy)
 
-##Output Parameters : 
+##**Output Parameters:** 
 
-**Success Response:**
+**Success Response:**  
+
 {"success":"Y","reason":"submitted successfully"}
 
 **Failure Response:**
@@ -94,7 +95,8 @@ File path:
 
 Please follow following commands if you wish to make any changes :
 
-**Build** : docker build -t customerinteraction .
+**Build** : docker build -t customerinteraction.  
+
 **Deploy Image:** docker run -it --restart=unless-stopped --name=customerinteraction -v /appl/automation/customerinteraction/app:/app customerinteraction
 [automation@cadlaut01 ~]$ docker ps -a|grep customerinteraction
 165e39812197        customerinteraction                      "/entrypoint.sh /s..."   2 days ago          Up 35 hours                 80/tcp, 443/tcp, 5000/tcp                                                customerinteraction
@@ -143,7 +145,7 @@ NA
 
 ## Acknowledgments
 
-* Pawan Kumar - Helped in containerization of code
+* **Pawan Kumar** - Helped in containerization of code
 
 
 
