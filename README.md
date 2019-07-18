@@ -88,8 +88,8 @@ data = '''{
 
 The code is located on Docker production env (caplaut01), location :
 
-Image name: 
-File path:
+Image name: customerinteraction
+File path: /appl/docker/volumes/customerinteraction
 
 
 Please follow following commands if you wish to make any changes :
